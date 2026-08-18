@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Career Planner Guidance</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+
+    <nav class="nav">
+
+        <a class="logo"
+           href="{{ url_for('home') }}">
+            Career Planner Guidance
+        </a>
+
+        <a href="{{ url_for('counselor') }}">
+            Counselor Panel
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="hero">
+
+    <section class="hero-card">
+
+        <span class="badge">
+            Student Career Guidance
+        </span>
+
+        <h1>
+            Plan Your Career With Confidence
+        </h1>
+
+        <p>
+            Create your student profile and receive
+            personalized career direction, recommended
+            skills, and practical next steps.
+        </p>
+
+        <a class="button"
+           href="{{ url_for('profile') }}">
+            Start Career Assessment
+        </a>
+
+    </section>
+
+
+    <section class="features">
+
+        <div class="feature">
+
+            <h3>01. Profile</h3>
+
+            <p>
+                Tell us about your education,
+                skills, interests, and goals.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <h3>02. Guidance</h3>
+
+            <p>
+                Get a suitable career direction
+                and skills to develop.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <h3>03. Action Plan</h3>
+
+            <p>
+                Follow practical steps toward
+                your selected career.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+
+</html>

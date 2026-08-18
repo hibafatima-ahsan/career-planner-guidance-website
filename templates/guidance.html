@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Your Career Guidance</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="nav">
+
+        <a class="logo"
+           href="{{ url_for('home') }}">
+            Career Planner Guidance
+        </a>
+
+        <a href="{{ url_for('counselor') }}">
+            Counselor Panel
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="page">
+
+
+<section class="profile-summary">
+
+    <span class="badge">
+        Your Profile
+    </span>
+
+    <h1>
+        Hello, {{ student.name }}!
+    </h1>
+
+
+    <div class="grid">
+
+        <div>
+
+            <strong>Education</strong>
+
+            <p>
+                {{ student.education }}
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <strong>Skills</strong>
+
+            <p>
+                {{ student.skills }}
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <strong>Interests</strong>
+
+            <p>
+                {{ student.interests }}
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <strong>Career Goal</strong>
+
+            <p>
+                {{ student.career_goal }}
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="guidance-card">
+
+    <span class="badge">
+        Step 2
+    </span>
+
+    <h2>
+        Recommended Career
+    </h2>
+
+    <h1>
+        {{ student.guidance.career }}
+    </h1>
+
+    <p>
+        Based on your current profile, this is
+        a suitable starting career direction.
+    </p>
+
+</section>
+
+
+
+<section class="two-column">
+
+
+<div class="card">
+
+    <h2>
+        Skills to Develop
+    </h2>
+
+    <ul>
+
+        {% for skill in student.guidance.skills %}
+
+        <li>
+            {{ skill }}
+        </li>
+
+        {% endfor %}
+
+    </ul>
+
+</div>
+
+
+
+<div class="card">
+
+    <h2>
+        Career Action Plan
+    </h2>
+
+    <ol>
+
+        {% for step in student.guidance.steps %}
+
+        <li>
+            {{ step }}
+        </li>
+
+        {% endfor %}
+
+    </ol>
+
+</div>
+
+
+</section>
+
+
+<a class="button"
+   href="{{ url_for('profile') }}">
+
+    Create Another Profile
+
+</a>
+
+
+</main>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+[
+    {
+        "career": "Python Developer",
+        "keywords": ["python", "programming", "software"],
+        "skills": ["Python", "OOP", "Git", "APIs", "SQL"]
+    },
+    {
+        "career": "Machine Learning Engineer",
+        "keywords": ["machine learning", "ml", "prediction", "models"],
+        "skills": ["Python", "NumPy", "Pandas", "Scikit-learn", "SQL"]
+    },
+    {
+        "career": "AI Engineer",
+        "keywords": ["ai", "artificial intelligence", "llm"],
+        "skills": ["Python", "Machine Learning", "APIs", "LLMs", "RAG"]
+    },
+    {
+        "career": "Web Developer",
+        "keywords": ["web", "html", "css", "javascript", "frontend"],
+        "skills": ["HTML", "CSS", "JavaScript", "Flask", "Git"]
+    },
+    {
+        "career": "Data Analyst",
+        "keywords": ["data", "sql", "analytics", "dashboard"],
+        "skills": ["Python", "Pandas", "SQL", "Excel", "Data Visualization"]
+    },
+    {
+        "career": "Cybersecurity Analyst",
+        "keywords": ["cyber", "security", "networking", "linux"],
+        "skills": ["Networking", "Linux", "Python", "Security Basics"]
+    }
+]

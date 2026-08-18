@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Ayesha",
+        "education": "BS Computer Science",
+        "skills": "Python, SQL, Machine Learning",
+        "interests": "AI, Data",
+        "career_goal": "Machine Learning Engineer"
+    },
+    {
+        "name": "Sara",
+        "education": "BS Software Engineering",
+        "skills": "HTML, CSS, JavaScript",
+        "interests": "Web Development",
+        "career_goal": "Frontend Developer"
+    },
+    {
+        "name": "Ali",
+        "education": "BS Computer Science",
+        "skills": "Python, Linux, Networking",
+        "interests": "Cybersecurity",
+        "career_goal": "Cybersecurity Analyst"
+    }
+]

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Counselor Panel</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="nav">
+
+        <a class="logo"
+           href="{{ url_for('home') }}">
+            Career Planner Guidance
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="page">
+
+    <span class="badge">
+        Human Review
+    </span>
+
+    <h1>
+        Counselor Panel
+    </h1>
+
+    <p>
+        Review student profiles and career guidance.
+    </p>
+
+
+    {% if students %}
+
+        {% for student in students %}
+
+        <section class="card student-card">
+
+            <h2>
+                {{ student.name }}
+            </h2>
+
+            <p>
+                <strong>Education:</strong>
+                {{ student.education }}
+            </p>
+
+            <p>
+                <strong>Skills:</strong>
+                {{ student.skills }}
+            </p>
+
+            <p>
+                <strong>Interests:</strong>
+                {{ student.interests }}
+            </p>
+
+            <p>
+                <strong>Career Goal:</strong>
+                {{ student.career_goal }}
+            </p>
+
+            <p>
+                <strong>Recommended Career:</strong>
+                {{ student.guidance.career }}
+            </p>
+
+
+            <div class="actions">
+
+                <button
+                    onclick="approveStudent('{{ student.name }}')">
+
+                    Approve
+
+                </button>
+
+
+                <button
+                    class="secondary"
+                    onclick="addNote('{{ student.name }}')">
+
+                    Add Note
+
+                </button>
+
+            </div>
+
+        </section>
+
+        {% endfor %}
+
+    {% else %}
+
+        <section class="card">
+
+            <p>
+                No student profiles have been submitted yet.
+            </p>
+
+        </section>
+
+    {% endif %}
+
+</main>
+
+
+<script src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+</body>
+
+</html>

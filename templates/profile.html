@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Career Assessment</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="nav">
+
+        <a class="logo"
+           href="{{ url_for('home') }}">
+            Career Planner Guidance
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="page">
+
+    <div class="form-card">
+
+        <span class="badge">
+            Step 1
+        </span>
+
+        <h1>
+            Build Your Career Profile
+        </h1>
+
+        <p>
+            Answer these questions to receive
+            career guidance.
+        </p>
+
+
+        <form method="POST"
+              action="{{ url_for('profile') }}">
+
+
+            <label for="name">
+                Full Name
+            </label>
+
+            <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="e.g. Hiba Fatima"
+                required
+            >
+
+
+            <label for="education">
+                Education
+            </label>
+
+            <input
+                id="education"
+                name="education"
+                type="text"
+                placeholder="e.g. BS Computer Science"
+                required
+            >
+
+
+            <label for="skills">
+                Current Skills
+            </label>
+
+            <input
+                id="skills"
+                name="skills"
+                type="text"
+                placeholder="e.g. Python, SQL, HTML"
+                required
+            >
+
+
+            <label for="interests">
+                Interests
+            </label>
+
+            <input
+                id="interests"
+                name="interests"
+                type="text"
+                placeholder="e.g. AI, Data, Web Development"
+                required
+            >
+
+
+            <label for="career_goal">
+                Career Goal
+            </label>
+
+            <input
+                id="career_goal"
+                name="career_goal"
+                type="text"
+                placeholder="e.g. AI Engineer"
+                required
+            >
+
+
+            <button
+                class="button full"
+                type="submit">
+
+                Generate Career Guidance
+
+            </button>
+
+        </form>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

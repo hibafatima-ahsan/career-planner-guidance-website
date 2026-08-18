@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Career Explorer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="nav">
+
+        <a class="logo"
+           href="{{ url_for('home') }}">
+            Career Planner Guidance
+        </a>
+
+        <div>
+
+            <a href="{{ url_for('home') }}">
+                Home
+            </a>
+
+            &nbsp;&nbsp;
+
+            <a href="{{ url_for('profile') }}">
+                Assessment
+            </a>
+
+            &nbsp;&nbsp;
+
+            <a href="{{ url_for('counselor') }}">
+                Counselor
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main class="page">
+
+    <span class="badge">
+        Career Explorer
+    </span>
+
+    <h1>
+        Explore Career Paths
+    </h1>
+
+    <p>
+        Explore different technology careers and the
+        skills required for each career.
+    </p>
+
+
+    <div class="two-column">
+
+        {% for career in careers %}
+
+        <div class="card">
+
+            <h2>
+                {{ career.career }}
+            </h2>
+
+            <h3>
+                Important Skills
+            </h3>
+
+            <ul>
+
+                {% for skill in career.skills %}
+
+                <li>
+                    {{ skill }}
+                </li>
+
+                {% endfor %}
+
+            </ul>
+
+
+            <h3>
+                Related Keywords
+            </h3>
+
+            <p>
+                {{ career.keywords | join(", ") }}
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+
+    <a class="button"
+       href="{{ url_for('profile') }}">
+
+        Take Career Assessment
+
+    </a>
+
+</main>
+
+</body>
+
+</html>

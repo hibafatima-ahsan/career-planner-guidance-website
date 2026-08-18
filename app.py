@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-
+import json
 app = Flask(__name__)
 
 # Temporary storage
@@ -109,7 +109,15 @@ def generate_guidance(skills, interests, career_goal):
 @app.route("/")
 def home():
     return render_template("index.html")
+@app.route("/careers")
+def careers():
+    with open("data/career_data.json", "r", encoding="utf-8") as file:
+        career_data = json.load(file)
 
+    return render_template(
+        "careers.html",
+        careers=career_data
+    )
 
 @app.route("/profile", methods=["GET", "POST"])
 def profile():
